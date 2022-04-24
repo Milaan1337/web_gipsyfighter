@@ -8,102 +8,271 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="style.css">
         <script src="bootstrap-5.0.2-dist/js/bootstrap.js"></script>
 
           </head>
-          <body class="bg-danger">
-            <div class="container-fluid">
-                <nav  style="padding-top: 0px; padding-bottom: 0px" class="navbar bg-dark navbar-dark fixed-top navbar-expand-sm">
-
-                    <ul style="width: 100%;" class="navbar-nav">
-                        
-                        <li class="navbar-brand col-1">
-                            <a class="text-white" href="#HomelessFighter"><img style="width: 100%; height:100%" src="files/homeless.png"/></a>
-                        </li>
-
-                        <li class="nav-item col-md-2">
-                          <a style="margin-right: 5%; height: 75%;" class="nav-link bg-danger text-white rounded-1" href="#HomelessFighter">HomelessFighter</a>
-                        </li>
-
-                        <li class="nav-item col-md-2">
-                          <a style="margin-right: 5%; height: 75%;" class="nav-link bg-danger text-white rounded-1" href="#HomelessStory">HomelessStory</a>
-                        </li>
-
-                        <li class="nav-item col-md-2">
-                          <a style="margin-right: 5%; height: 75%;" class="nav-link bg-danger text-white rounded-1" href="#HomelessCreators">HomelessCreators</a>
-                        </li>
-
-                        <li class="nav-item col-3">
-                        </li>
-
-                        <li class="nav-item col-md-2">
-                            <a style="margin-right: 5%; height: 75%;" class="nav-link bg-danger text-white rounded-1" href="downloadpage.html">Download</a>
-                        </li>
-
-                      </ul>
-                
-                </nav>
-
-            </div>
+          <body>
+            <nav class="fixed-top navbar navbar-expand-lg navbar-light bg-dark">
+              <div class="container-fluid">
+                  <a href="index.html" class="navbar-brand">
+                      <img src="files/homeless.png" height="35" alt="CoolBrand">
+                  </a>
+                  <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarCollapse">
+                      <div class="navbar-nav">
+                          <a id="HomelessFighter" href="#HomelessFighter"  class="nav-item nav-link text-white box" onclick="changeActiveElement('HomelessFighter')">Homeless Fighter</a>
+                          <a href="index.html#HomelessStory"  id="HomelessStory" class="nav-item nav-link text-white box" onclick="changeActiveElement('HomelessStory')">Story</a>
+                          <a href="#HomelessCreators" id="HomelessCreators" class="nav-item nav-link text-white box" onclick="changeActiveElement('HomelessCreators')">Készítők</a>
+                      </div>
+                      <div class="navbar-nav ms-auto">
+                          <a id="download" href="#HomelessDownload" class="nav-item nav-link text-white box" onclick="changeActiveElement('download')">Letöltés</a>
+                      </div>
+                  </div>
+              </div>
+          </nav>
         
         <div>
-            <div id="HomelessFighter" style="padding:100px 20px;" class="container-fluid-sm bg-secondary text-white"> 
+          <!-- Carousel -->
+<div id="demo" style="max-height: 900px;" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img style="max-height: 900px;" src="files/menu.png" alt="Los Angeles" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img style="max-height: 900px;" src="files/ig.png" alt="Chicago" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img style="max-height: 900px;" src="files/igig.png" alt="New York" class="d-block w-100">
+    </div>
+  </div>
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+            <div id="HomelessFighter" style="padding:100px 20px;background-color: #e2e8e4; color: grey;" class="container-fluid-sm"> 
                 <h1>Homeless Fighter</h1>
-                <p>
-                    Homeless Fighter egy nagyon komoly játék Pankix tervezte.
+                <p> 
+                    A Homeless fighter nevezetű játék egy projektórára készült pythonba írt 2D - s felülnézetes hajléktalanokkal harcoló <a href="https://en.wikipedia.org/wiki/Hack_and_slash">Hack and Slash</a> típusú játék. A játék célja minél nagyobb szint elérése, és ezzel egyidejűleg minél nagyobb szintű hajléktalanok legyőzése.
                 </p>
             </div>
-            <div id="HomelessStory" style="padding:100px 20px;" class="container-fluid-sm bg-dark text-white"> 
-                <h1>Homeless Story</h1>
+            <div id="HomelessStory" style="padding:100px 20px; background-color: #C4DFE6; color: grey;" class="container-fluid-sm"> 
+                <h1>Story</h1>
                 <p>
-                    Homeless Fighter egy Duranda melletti szigeten, és Pákán játszódik, nagyon durva a gameplay.
+                    A Homeless Fighterben a karakterünk egy putris faluban ébred. Később kiderül, hogy ez Páka, a gyilkos hajléktalaok falva. Karakterünk célja a túlélés és, hogy újra szabadságot hozzon a falu lakosainak(50fő).Átélhetjük az akciódús harcot a főhősünk és az ittas hajléktalanok között.
                 </p>
-            </div>
-            <div id="HomelessCreators" style="padding:100px 20px;" class="container-fluid-sm bg-danger text-white"> 
-                <h1>Homeless Creators</h1>
-                <p>
-                    Igazi testépítők alkották.
-                </p>
-                
+                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43873.08381809458!2d16.631935222960216!3d46.58589824644792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4768c8fae6d44ca9%3A0x400c4290c1e62c0!2zUMOha2EsIDg5NTY!5e0!3m2!1shu!2shu!4v1650808442846!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             
+            <div id="HomelessDownload" style="padding:100px 20px;background-color: #07575B; color: grey;" class="container-fluid-sm"> 
+              <h1>Letöltés</h1>
+              <p>
+                <div style="margin-top: 6%;" class="d-grid gap-3">
+                  <a type="button" class="btn btn-dark btn-outline-light btn-block" value="Download here" href="files/HomelessFighter.rar" data-bs-toggle="tooltip" title="Játék letöltése" download="files/HomelessFighter.rar" onclick ="">Letöltés</a>
+                  
+                </div>
+  
+                <div class="text-center " style="margin-top: 2%;">
+                  <p>
+                      <button class="btn btn-primary btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Segítség a letöltéshez
+                      </button>
+                    </p>
+                    <div class="collapse " id="collapseExample">
+                      <div class="card card-body">
+                        <p style="color:black;">Ha a letöltés nem indul el, pár másodperc múlva próbáld meg újra.</p>
+                      </div>
+                    </div>
+                </div>
+              </p>  
+            </div>
+            <div id="HomelessCreators" style="padding:100px 20px;background-color: #003B46; color: grey;" class="container-fluid-sm"> 
+              <h1>Csapattagok</h1>
+              <div class="container p-5">
+                <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+                    <div class="col kartya">
+                        <div class="card h-100 shadow-sm">
+                            <div class="text-center">
+                   
+        
+                                <div class="img-hover-zoom img-hover-zoom--colorize">
+                                    <img style="width: 200px;height: 185px;" class="shadow" src="files/mylo.jpg"
+                                        alt="Another Image zoom-on-hover effect">
+                                </div>
+        
+                            </div>
+                   
+                            <div class="card-body">
+                                <div class="clearfix mb-3">
+        
+        
+                 
+        
+                                </div>
+        
+        
+                                <div class="my-2 text-center">
+        
+                                    <h1>Fellner Milán</h1>
+        
+                                </div>
+                                <div class="mb-3">
+        
+                                    <h2 class="text-uppercase text-center role">"Aki nem lábazik az ratyi"</h2>
+        
+                                </div>
+                                <div class="box2">
+                                    <div>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item"><i class="fab fa-github"></i></li>
+                                            <li class="list-inline-item"><i class="fab fa-linkedin-in"></i></li>
+                                            <li class="list-inline-item"><i class="fab fa-instagram"></i></li>
+                                            <li class="list-inline-item"><i class="fab fa-twitter"></i></li>
+                                        </ul>
+        
+                                    </div>
+                                </div>
+        
+                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col kartya">
+                        <div class="card h-100 shadow-sm">
+                            <div class="text-center">
+                       
+        
+                                <div class="img-hover-zoom img-hover-zoom--colorize">
+                                    <img style="width: 200px;" class="shadow" src="files/boldi.jpg"
+                                        alt="Another Image zoom-on-hover effect">
+                                </div>
+        
+                            </div>
+                       
+                            <div class="card-body">
+                                <div class="clearfix mb-3">
+        
+        
+                      
+        
+                                </div>
+        
+        
+                                <div class="my-2 text-center">
+        
+                                    <h1>Horváth Boldizsár</h1>
+        
+                                </div>
+                                <div class="mb-3">
+        
+                                    <h2 class="text-uppercase text-center role">SEO Specialist</h2>
+        
+                                </div>
+                                <div class="box2">
+                                    <div>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item"><i class="fab fa-github"></i></li>
+                                            <li class="list-inline-item"><i class="fab fa-linkedin-in"></i></li>
+                                            <li class="list-inline-item"><i class="fab fa-instagram"></i></li>
+                                            <li class="list-inline-item"><i class="fab fa-twitter"></i></li>
+                                        </ul>
+        
+                                    </div>
+                                </div>
+        
+                             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col kartya">
+                      <div class="card h-100 shadow-sm">
+                          <div class="text-center">
+                     
+      
+                              <div class="img-hover-zoom img-hover-zoom--colorize">
+                                  <img style="width: 200px; height: 210px;" class="shadow" src="files/jani.jpg"
+                                      alt="Another Image zoom-on-hover effect">
+                              </div>
+      
+                          </div>
+                     
+                          <div class="card-body">
+                              <div class="clearfix mb-3">
+      
+      
+                    
+      
+                              </div>
+      
+      
+                              <div class="my-2 text-center">
+      
+                                  <h1>Kancsal Máté</h1>
+      
+                              </div>
+                              <div class="mb-3">
+      
+                                  <h2 class="text-uppercase text-center role">SEO Specialist</h2>
+      
+                              </div>
+                              <div class="box2">
+                                  <div>
+                                      <ul class="list-inline">
+                                          <li class="list-inline-item"><i class="fab fa-github"></i></li>
+                                          <li class="list-inline-item"><i class="fab fa-linkedin-in"></i></li>
+                                          <li class="list-inline-item"><i class="fab fa-instagram"></i></li>
+                                          <li class="list-inline-item"><i class="fab fa-twitter"></i></li>
+                                      </ul>
+      
+                                  </div>
+                              </div>
+      
+                           
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              
+          </div>
               </div>
-              <div>
-                <nav>
-                    <ul style="" class="navbar">
-                        <li class="navbar-brand col-1">
-                            <div class="card" style="width:200px">
-                                <img class="card-img-top" src="files/img_avatar1.png" alt="Card image">
-                                <div class="card-body">
-                                  <h4 class="card-title" style="font-size: 90%;">Horváth Boldizsár</h4>
-                                  <p class="card-text">Az úthengeres.</p>
-                                  <a href="#" class="btn btn-primary">See Profile</a>
-                                </div>
-                              </div>
-                        </li>
-                        <li class="navbar-brand col-1">
-                            <div class="card" style="width:200px">
-                                <img class="card-img-top" src="files/img_avatar1.png" alt="Card image">
-                                <div class="card-body">
-                                  <h4 class="card-title">Fellner Milán</h4>
-                                  <p class="card-text">A favágó.</p>
-                                  <a href="#" class="btn btn-primary">See Profile</a>
-                                </div>
-                              </div>
-                        </li>
-                        <li class="navbar-brand col-1,">
-                            <div class="card" style="width:200px">
-                                <img class="card-img-top" src="files/img_avatar1.png" alt="Card image">
-                                <div class="card-body">
-                                  <h4 class="card-title">Kancsal Máté</h4>
-                                  <p class="card-text">A legday skipper</p>
-                                  <a href="#" class="btn btn-primary">See Profile</a>
-                                </div>
-                              </div>
-                        </li>
-                    </ul>
-                </nav>
-              </div>
+          <script>
+            function changeActiveElement(id){
+              const HomelessFighter = document.getElementById("HomelessFighter");
+              const HomelessStory = document.getElementById("HomelessStory");
+              const HomelessCreators = document.getElementById("HomelessCreators");
+              const download = document.getElementById("download")
+              const boxactive = "box-active";
+
+              if (HomelessFighter.classList.contains(boxactive)){
+                HomelessFighter.classList.remove(boxactive);
+              }else if (HomelessStory.classList.contains(boxactive)){
+                HomelessStory.classList.remove(boxactive);
+              }else if (download.classList.contains(boxactive)) {
+                download.classList.remove(boxactive);
+              }else{
+                HomelessCreators.classList.remove(boxactive);
+              }
+
+              var activePage = document.getElementById(id)
+              activePage.classList.add(boxactive)
+            }
+          </script>
 
 
           </body>
