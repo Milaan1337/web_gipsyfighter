@@ -23,9 +23,9 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarCollapse">
                       <div class="navbar-nav">
-                          <a id="HomelessFighter" href="#HomelessFighter"  class="nav-item nav-link text-white box" onclick="changeActiveElement('HomelessFighter')">Homeless Fighter</a>
-                          <a href="index.html#HomelessStory"  id="HomelessStory" class="nav-item nav-link text-white box" onclick="changeActiveElement('HomelessStory')">Story</a>
-                          <a href="#HomelessCreators" id="HomelessCreators" class="nav-item nav-link text-white box" onclick="changeActiveElement('HomelessCreators')">Készítők</a>
+                          <a id="fighter" href="#HomelessFighter" class="nav-item nav-link text-white box" onclick="changeActiveElement('fighter')">Homeless Fighter</a>
+                          <a id="story" href="#HomelessStory" class="nav-item nav-link text-white box" onclick="changeActiveElement('story')">Story</a>
+                          <a id="creators" href="#HomelessCreators" class="nav-item nav-link text-white box" onclick="changeActiveElement('creators')">Készítők</a>
                       </div>
                       <div class="navbar-nav ms-auto">
                           <a id="download" href="#HomelessDownload" class="nav-item nav-link text-white box" onclick="changeActiveElement('download')">Letöltés</a>
@@ -75,7 +75,7 @@
             <div id="HomelessStory" style="padding:100px 20px; background-color: #C4DFE6; color: grey;" class="container-fluid-sm"> 
                 <h1>Story</h1>
                 <p>
-                    A Homeless Fighterben a karakterünk egy putris faluban ébred. Később kiderül, hogy ez Páka, a gyilkos hajléktalaok falva. Karakterünk célja a túlélés és, hogy újra szabadságot hozzon a falu lakosainak(50fő).Átélhetjük az akciódús harcot a főhősünk és az ittas hajléktalanok között.
+                    A Homeless Fighterben a karakterünk egy putris faluban ébred. Később kiderül, hogy ez Páka, a gyilkos hajléktalanok falva. Karakterünk célja a túlélés és, hogy újra szabadságot hozzon a falu lakosainak(50fő).Átélhetjük az akciódús harcot a főhősünk és az ittas hajléktalanok között.
                 </p>
                 <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43873.08381809458!2d16.631935222960216!3d46.58589824644792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4768c8fae6d44ca9%3A0x400c4290c1e62c0!2zUMOha2EsIDg5NTY!5e0!3m2!1shu!2shu!4v1650808442846!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -217,20 +217,20 @@
               </div>
           <script>
             function changeActiveElement(id){
-              const HomelessFighter = document.getElementById("HomelessFighter");
-              const HomelessStory = document.getElementById("HomelessStory");
-              const HomelessCreators = document.getElementById("HomelessCreators");
+              const fighter = document.getElementById("fighter");
+              const story = document.getElementById("story");
+              const creators = document.getElementById("creators");
               const download = document.getElementById("download")
               const boxactive = "box-active";
 
-              if (HomelessFighter.classList.contains(boxactive)){
-                HomelessFighter.classList.remove(boxactive);
-              }else if (HomelessStory.classList.contains(boxactive)){
-                HomelessStory.classList.remove(boxactive);
+              if (fighter.classList.contains(boxactive)){
+                fighter.classList.remove(boxactive);
+              }else if (story.classList.contains(boxactive)){
+                story.classList.remove(boxactive);
               }else if (download.classList.contains(boxactive)) {
                 download.classList.remove(boxactive);
               }else{
-                HomelessCreators.classList.remove(boxactive);
+                creators.classList.remove(boxactive);
               }
 
               var activePage = document.getElementById(id)
